@@ -1,0 +1,173 @@
+/* for tablet 992px */
+@media screen and (max-width:1024px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+      }
+    
+      .hero-content p {
+        font-size: 1rem;
+      }
+    
+      .property-features-container {
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+    
+      .feature-card {
+        width: 180px;
+        height: 130px;
+      }
+    
+      .projects-grid {
+        gap: 15px;
+        padding: 30px 15px;
+      }
+    
+      .project-card {
+        width: 48%;
+      }
+    
+      .about-section {
+        flex-direction: column;
+      }
+    
+      .about-image img {
+        max-width: 90%;
+      }
+    
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+    
+      .footer-links-section {
+        flex-direction: column;
+        gap: 20px;
+      }
+    
+      .contact-buttons a {
+        width: 50px;
+        height: 50px;
+      }
+    
+      .contact-buttons img {
+        width: 50%;
+        height: 50%;
+      }
+}
+
+/* for ipad 768px */
+@media screen and (max-width:991px) {
+    .hero {
+        height: 800px;
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+      }
+    
+      .hero-content p {
+        font-size: 0.9rem;
+      }
+    
+      .projects-grid {
+        gap: 10px;
+      }
+    
+      .project-card {
+        width: 100%;
+      }
+    
+      .property-features-container {
+        gap: 10px;
+      }
+    
+      .feature-card {
+        width: 49%;
+        height: auto;
+        padding: 15px;
+      }
+    
+      .footer-content {
+        text-align: center;
+      }
+    
+      .contact-buttons a {
+        width: 45px;
+        height: 45px;
+      }
+    
+      .contact-buttons img {
+        width: 40%;
+        height: 40%;
+      }
+}
+
+
+
+
+/* for mobile 360px  */
+@media screen and (max-width:767px) {
+
+    .hero {
+        height: 895px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem;
+      }
+    
+      .hero-content p {
+        font-size: 0.8rem;
+      }
+    
+      .projects-grid {
+        flex-direction: column;
+        gap: 15px;
+      }
+    
+      .project-card {
+        width: 100%;
+      }
+    
+      .about-section {
+        flex-direction: column;
+      }
+    
+      .about-image img {
+        max-width: 100%;
+      }
+    
+      .property-features-container {
+        flex-direction: column;
+        gap: 10px;
+      }
+    
+      .feature-card {
+        width: 100%;
+        padding: 10px;
+      }
+    
+      .contact-buttons {
+        bottom: 10px;
+        right: 10px;
+      }
+    
+      .contact-buttons a {
+        width: 40px;
+        height: 40px;
+      }
+    
+      .contact-buttons img {
+        width: 35%;
+        height: 35%;
+      }
+    
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+    
+      .footer-links-section {
+        flex-direction: column;
+      }
+}
