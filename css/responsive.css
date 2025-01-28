@@ -1,173 +1,327 @@
 /* for tablet 992px */
 @media screen and (max-width:1024px) {
-    .hero-content h1 {
-        font-size: 2.5rem;
-      }
-    
-      .hero-content p {
-        font-size: 1rem;
-      }
-    
-      .property-features-container {
-        flex-wrap: wrap;
-        gap: 15px;
-      }
-    
-      .feature-card {
-        width: 180px;
-        height: 130px;
-      }
-    
-      .projects-grid {
-        gap: 15px;
-        padding: 30px 15px;
-      }
-    
-      .project-card {
-        width: 48%;
-      }
-    
-      .about-section {
-        flex-direction: column;
-      }
-    
-      .about-image img {
-        max-width: 90%;
-      }
-    
-      .footer-content {
-        flex-direction: column;
-        text-align: center;
-      }
-    
-      .footer-links-section {
-        flex-direction: column;
-        gap: 20px;
-      }
-    
-      .contact-buttons a {
-        width: 50px;
-        height: 50px;
-      }
-    
-      .contact-buttons img {
-        width: 50%;
-        height: 50%;
-      }
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .property-features-container {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .feature-card {
+    width: 180px;
+    height: 130px;
+  }
+
+  .projects-grid {
+    gap: 15px;
+    padding: 30px 15px;
+  }
+
+  .project-card {
+    width: 48%;
+  }
+
+  .about-section {
+    flex-direction: column;
+  }
+
+  .about-image {
+    text-align: center;
+  }
+
+  .about-image img {
+    max-width: 90%;
+  }
+
+  .about-heading {
+    text-align: center;
+  }
+
+  .divider {
+    justify-self: center;
+
+  }
+
+  .about-subheading {
+    text-align: center;
+  }
+
+  .footer-content {
+    flex-direction: row;
+    text-align: center;
+  }
+
+
+  .footer-links-section {
+    flex-direction: row;
+    gap: 80px;
+    line-height: 2;
+  }
+
+  .contact-buttons a {
+    width: 50px;
+    height: 50px;
+  }
+
+  .contact-buttons img {
+    width: 50%;
+    height: 50%;
+  }
+
+
+  .commercial-mall-section {
+    padding-bottom: 40px;
+  }
+
+  .mall-heading {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .mall-subheading {
+    font-size: 15px;
+  }
+
+  .container,
+  .container-md,
+  .container-sm {
+    max-width: 90%;
+  }
+
+  .img-fluid {
+    max-width: 95%;
+  }
+
+  .mall-description {
+    font-size: 13px;
+    line-height: 1.3;
+  }
+
+
+
+
+
+
+
+  .categories {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+
+
+
 }
 
 /* for ipad 768px */
 @media screen and (max-width:991px) {
-    .hero {
-        height: 800px;
-    }
-    .hero-content h1 {
-        font-size: 2rem;
-      }
-    
-      .hero-content p {
-        font-size: 0.9rem;
-      }
-    
-      .projects-grid {
-        gap: 10px;
-      }
-    
-      .project-card {
-        width: 100%;
-      }
-    
-      .property-features-container {
-        gap: 10px;
-      }
-    
-      .feature-card {
-        width: 49%;
-        height: auto;
-        padding: 15px;
-      }
-    
-      .footer-content {
-        text-align: center;
-      }
-    
-      .contact-buttons a {
-        width: 45px;
-        height: 45px;
-      }
-    
-      .contact-buttons img {
-        width: 40%;
-        height: 40%;
-      }
-}
+  .hero {
+    height: 800px;
+  }
 
+  .hero-content {
+    padding: 60px 60px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .projects-grid {
+    gap: 10px;
+  }
+
+  .project-card {
+    width: 100%;
+  }
+
+  .property-features-container {
+    gap: 10px;
+  }
+
+  .feature-card {
+    width: 49%;
+    height: auto;
+    padding: 15px;
+  }
+
+
+  .container,
+  .container-md,
+  .container-sm {
+    max-width: 100%;
+  }
+
+  .img-fluid {
+    max-width: 100%;
+  }
+
+  .mall-subheading {
+    margin-bottom: 10px;
+  }
+
+  .mall-description {
+    margin-bottom: 5px;
+  }
+
+  .footer-content {
+    text-align: center;
+    justify-content: space-between;
+
+  }
+
+  .footer-links-section {
+    gap: 60px;
+  }
+
+  .contact-buttons a {
+    width: 45px;
+    height: 45px;
+  }
+
+  .contact-buttons img {
+    width: 40%;
+    height: 40%;
+  }
+
+
+
+  .contact-address,
+  .contact-phone,
+  .contact-email {
+    font-size: 12px;
+    line-height: 2.6;
+  }
+
+  .social-icons {
+    gap: 44px;
+
+
+  }
+}
 
 
 
 /* for mobile 360px  */
 @media screen and (max-width:767px) {
 
-    .hero {
-        height: 895px;
-    }
+  .hero {
+    height: 800px;
+}
 
-    .hero-content h1 {
-        font-size: 1.5rem;
-      }
-    
-      .hero-content p {
-        font-size: 0.8rem;
-      }
-    
-      .projects-grid {
-        flex-direction: column;
-        gap: 15px;
-      }
-    
-      .project-card {
-        width: 100%;
-      }
-    
-      .about-section {
-        flex-direction: column;
-      }
-    
-      .about-image img {
-        max-width: 100%;
-      }
-    
-      .property-features-container {
-        flex-direction: column;
-        gap: 10px;
-      }
-    
-      .feature-card {
-        width: 100%;
-        padding: 10px;
-      }
-    
-      .contact-buttons {
-        bottom: 10px;
-        right: 10px;
-      }
-    
-      .contact-buttons a {
-        width: 40px;
-        height: 40px;
-      }
-    
-      .contact-buttons img {
-        width: 35%;
-        height: 35%;
-      }
-    
-      .footer-content {
-        flex-direction: column;
-        text-align: center;
-      }
-    
-      .footer-links-section {
-        flex-direction: column;
-      }
+
+.hero-content {
+  padding: 50px 21px;
+  width: 95%;
+}
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-content p {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-content .address {
+    display: none;
+}
+
+  .projects-grid {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .project-card {
+    width: 100%;
+  }
+
+  .about-section {
+    padding: 0px;
+}
+  .about-section {
+    flex-direction: column;
+  }
+
+  .about-image img {
+    max-width: 100%;
+  }
+  .feature-title {
+    font-size: 9px;
+}
+  .property-features-container {
+    gap: 10px;
+  }
+
+  .feature-card {
+    width: 48%;
+    padding: 10px;
+}
+
+  .contact-buttons {
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .contact-buttons a {
+    width: 40px;
+    height: 40px;
+  }
+
+  .contact-buttons img {
+    width: 35%;
+    height: 35%;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-links-section {
+    flex-direction: column;
+  }
+
+
+
+
+
+
+
+
+
+
+  .justify-content-evenly {
+    gap: 10px;
+}
+
+  .contact-card {
+    height: 400px;
+    width: 81%;
+}
+
+
+
+
+
+
+
+
+
+
+.mall-image, .mall-content {
+  margin-top: 20px;
+}
 }
