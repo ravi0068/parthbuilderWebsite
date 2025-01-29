@@ -491,6 +491,51 @@ body {
     margin: 10px 0;
 }
 
+
+
+.about-section {
+    opacity: 0;
+    /* Initially hidden */
+    transition: opacity 0.5s ease;
+    /* Smooth transition for the whole section */
+}
+
+.about-section.scrolled {
+    opacity: 1;
+    /* Visible when scrolled into view */
+}
+
+
+.about-image,
+.about-content {
+    transform: translateX(-50px);
+    /* Start off-screen to the left for image */
+    opacity: 0;
+    transition: transform 0.8s ease, opacity 0.5s ease;
+    /* Smooth transition */
+}
+
+.about-content {
+    transform: translateX(50px);
+    /* Start off-screen to the right for content */
+}
+
+.about-section.scrolled .about-image {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.about-section.scrolled .about-content {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+
+
+
+
+
+
 /* Services Section */
 .services {
     padding: 4rem 0;
@@ -727,7 +772,7 @@ body {
 
 
 .commercial-mall-section {
-    /* padding: 40px; */
+    padding-bottom: 70px;
 }
 
 
@@ -893,6 +938,7 @@ body {
     gap: 51px;
     justify-content: center;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .social-link {

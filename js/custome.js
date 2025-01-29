@@ -79,6 +79,25 @@ document.addEventListener("scroll", function () {
       section.classList.add("scrolled");
   }
 });
+
+
+function addScrolledClass() {
+  const aboutSection = document.getElementById('about');
+  if (!aboutSection) return; // Exit if no element found
+
+  const sectionTop = aboutSection.getBoundingClientRect().top;
+  const viewportHeight = window.innerHeight;
+  const triggerPoint = 0.8 * viewportHeight;
+
+  if (sectionTop < triggerPoint) {
+    aboutSection.classList.add('scrolled');
+  } else {
+    aboutSection.classList.remove('scrolled');
+  }
+}
+
+addScrolledClass(); // Check on initial load
+window.addEventListener('scroll', addScrolledClass);
  
 
 
@@ -118,19 +137,19 @@ gsap.from(".About",{
 
 
 
-gsap.from(".nav-item",{
-  opacity:0,
-  duration:1,
+// gsap.from(".nav-item",{
+//   opacity:0,
+//   duration:1,
  
-  delay:1,
-  stagger:0.5,
-})
+//   delay:1,
+//   stagger:0.5,
+// })
 
 
-gsap.from(".navbar-brand",{
-  opacity:0,
-  duration:1,
+// gsap.from(".navbar-brand",{
+//   opacity:0,
+//   duration:1,
  
-  delay:1,
-  stagger:0.5,
-})
+//   delay:1,
+//   stagger:0.5,
+// })
