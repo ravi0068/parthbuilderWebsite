@@ -14,7 +14,20 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
+<style>
+    /* ... (Previous CSS styles for card, grid, etc.) ... */
 
+    .delivered-project-card {
+        opacity: 0; /* Initially hidden */
+        transform: translateY(20px); /* Slightly moved down */
+        transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transitions */
+    }
+
+    .delivered-project-card.show { /* Class added by JavaScript when visible */
+        opacity: 1;
+        transform: translateY(0); /* Back to original position */
+    }
+</style>
 <body>
 
     <section class="topheader">
@@ -89,26 +102,7 @@
             <br>
 
 
-            <div class="property-features-section">
-                <div class="property-features-container">
-                    <div class="feature-card residential-feature">
-                        <img src="images/residential-propert.webp" alt="Residential Properties" class="feature-icon">
-                        <p class="feature-title">RESIDENTIAL PROPERTIES</p>
-                    </div>
-                    <div class="feature-card commercial-feature">
-                        <img src="images/commercial-property.webp" alt="Commercial Properties" class="feature-icon">
-                        <p class="feature-title">COMMERCIAL PROPERTIES</p>
-                    </div>
-                    <div class="feature-card rera-feature">
-                        <img src="images/register.webp" alt="RERA Registered" class="feature-icon">
-                        <p class="feature-title">RERA NO. RAJ/P/2023/2650</p>
-                    </div>
-                    <div class="feature-card jda-feature">
-                        <img src="images/jda-approved.webp" alt="JDA Approved" class="feature-icon">
-                        <p class="feature-title">JDA APPROVED</p>
-                    </div>
-                </div>
-            </div>
+            
 
 
         </div>
@@ -117,6 +111,26 @@
 
     </section>
 
+    <div class="property-features-section">
+        <div class="property-features-container">
+            <div class="feature-card residential-feature">
+                <img src="images/residential-propert.webp" alt="Residential Properties" class="feature-icon">
+                <p class="feature-title">RESIDENTIAL PROPERTIES</p>
+            </div>
+            <div class="feature-card commercial-feature">
+                <img src="images/commercial-property.webp" alt="Commercial Properties" class="feature-icon">
+                <p class="feature-title">COMMERCIAL PROPERTIES</p>
+            </div>
+            <div class="feature-card rera-feature">
+                <img src="images/register.webp" alt="RERA Registered" class="feature-icon">
+                <p class="feature-title">RERA NO. RAJ/P/2023/2650</p>
+            </div>
+            <div class="feature-card jda-feature">
+                <img src="images/jda-approved.webp" alt="JDA Approved" class="feature-icon">
+                <p class="feature-title">JDA APPROVED</p>
+            </div>
+        </div>
+    </div>
     <!-- Card Section -->
     <!-- <section class="property-features-section">
         <div class="property-features-container">
@@ -149,7 +163,7 @@
 
         <div class="projects-grid">
             <!-- Card 1 -->
-            <div class="project-card">
+            <div class="project-card" id="card-box">
                 <img src="images/prime-1.webp" alt="Parth Prime">
                 <span class="featured-badge">Featured</span>
                 <div class="card-content">
@@ -160,7 +174,7 @@
             </div>
 
             <!-- Card 2 -->
-            <div class="project-card">
+            <div class="project-card" id="card-box2nd">
                 <img src="images/prime-1.webp" alt="Parth Palace">
                 <span class="featured-badge">Featured</span>
                 <div class="card-content">
@@ -172,7 +186,7 @@
 
 
             <!-- Card 3 -->
-            <div class="project-card">
+            <div class="project-card" id="card-box3">
                 <img src="images/elegance.webp" alt="Parth Palace">
                 <span class="featured-badge">Featured</span>
                 <div class="card-content">
@@ -183,7 +197,7 @@
             </div>
 
             <!-- Card 4 -->
-            <div class="project-card">
+            <div class="project-card" id="card-box4">
                 <img src="images/sunrise.webp" alt="Parth Palace">
                 <span class="featured-badge">Featured</span>
                 <div class="card-content">
@@ -195,7 +209,7 @@
 
 
             <!-- Card 5 -->
-            <div class="project-card">
+            <div class="project-card" id="card-box5">
                 <img src="images/enclave.webp" alt="Parth Palace">
                 <span class="featured-badge">Featured</span>
                 <div class="card-content">
@@ -207,7 +221,7 @@
 
 
             <!-- Card 6 -->
-            <div class="project-card">
+            <div class="project-card" id="card-box6">
                 <img src="images/sunshine.webp" alt="Parth Palace">
                 <span class="featured-badge">Featured</span>
                 <div class="card-content">
@@ -219,7 +233,7 @@
 
 
             <!-- Card 7 -->
-            <div class="project-card">
+            <div class="project-card" id="card-box7">
                 <img src="images/apartment.jpg" alt="Parth Palace">
                 <span class="featured-badge">Featured</span>
                 <div class="card-content">
@@ -236,15 +250,11 @@
 
 
 
-
-    <section class="projects-section">
-        <h2>Delivered Projects</h2>
-        <p>Parthsarthi’s Delivered Projects</p>
-        <div class="divider"></div>
-
-        <div class="projects-grid">
-            <!-- Card 1 -->
-            <div class="project-card">
+    <section class="delivered-projects-section">
+        <h2>Delivered Projects</h2>  <div class="divider"></div>
+    
+        <div class="delivered-projects-grid">
+            <div class="delivered-project-card">
                 <img src="images/empire.webp" alt="Parth Prime">
                 <span class="featured-badge">Featured</span>
                 <div class="card-content">
@@ -253,9 +263,8 @@
                     <a href="#" class="explore-btn">Explore Now</a>
                 </div>
             </div>
-
-            <!-- Card 2 -->
-            <div class="project-card">
+    
+            <div class="delivered-project-card">
                 <img src="images/planet.webp" alt="Parth Palace">
                 <span class="featured-badge">Featured</span>
                 <div class="card-content">
@@ -264,10 +273,8 @@
                     <a href="#" class="explore-btn">Explore Now</a>
                 </div>
             </div>
-
-
-            <!-- Card 3 -->
-            <div class="project-card">
+    
+            <div class="delivered-project-card">
                 <img src="images/residency.webp" alt="Parth Palace">
                 <span class="featured-badge">Featured</span>
                 <div class="card-content">
@@ -276,9 +283,8 @@
                     <a href="#" class="explore-btn">Explore Now</a>
                 </div>
             </div>
-
-            <!-- Card 4 -->
-            <div class="project-card">
+    
+            <div class="delivered-project-card">
                 <img src="images/homes.webp" alt="Parth Palace">
                 <span class="featured-badge">Featured</span>
                 <div class="card-content">
@@ -287,12 +293,9 @@
                     <a href="#" class="explore-btn">Explore Now</a>
                 </div>
             </div>
-
-            <!-- Additional Cards -->
-            <!-- Add more cards as needed -->
-        </div>
+    
+            </div>
     </section>
-
 
 
 
@@ -495,6 +498,33 @@
 
     <div id="scrollUpButton" onclick="scrollToTop()">↑</div>
 
+
+
+
+    <script>
+        const cards = document.querySelectorAll('.delivered-project-card');
+
+        function checkVisibility() {
+            cards.forEach(card => {
+                const cardTop = card.getBoundingClientRect().top;
+                const triggerPoint = window.innerHeight * 0.8; // Adjust as needed
+
+                if (cardTop < triggerPoint) {
+                    card.classList.add('show');
+                } else {
+                    card.classList.remove('show'); // Optional: Reset animation on scroll up
+                }
+            });
+        }
+
+        window.addEventListener('scroll', checkVisibility);
+        checkVisibility(); // Check on initial load
+    </script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"

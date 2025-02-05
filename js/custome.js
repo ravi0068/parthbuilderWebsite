@@ -104,6 +104,17 @@ window.addEventListener('scroll', addScrolledClass);
 
 
 
+
+document.addEventListener("scroll", function() {
+  const section = document.querySelector(".projects-section");
+  if (section.getBoundingClientRect().top < window.innerHeight * 0.8) {
+      section.classList.add("scrolled");
+  }
+});
+
+
+
+
 // const slider = document.querySelector('.gallery-slider');
 // const slides = document.querySelectorAll('.gallery-slide');
 // const prevButton = document.querySelector('.prev');
@@ -153,3 +164,54 @@ gsap.from(".About",{
 //   delay:1,
 //   stagger:0.5,
 // })
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from(".contact-heading", {
+      opacity: 0,
+      y: 50,
+      duration: 0.8,
+      ease: "power2.out",
+      scrollTrigger: {
+          trigger: ".contact-heading",
+          start: "top 80%",
+          toggleActions: "play none none none"
+      }
+  });
+
+  gsap.utils.toArray(".contact-card").forEach((card, index) => {
+      gsap.from(card, {
+          opacity: 0,
+          y: 50,
+          duration: 0.8,
+          ease: "power2.out",
+          delay: index * 0.2,
+          scrollTrigger: {
+              trigger: card,
+              start: "top 85%",
+              toggleActions: "play none none none"
+          }
+      });
+  });
+
+  gsap.from(".map-container", {
+      opacity: 0,
+      y: 50,
+      duration: 0.8,
+      ease: "power2.out",
+      scrollTrigger: {
+          trigger: ".map-container",
+          start: "top 85%",
+          toggleActions: "play none none none"
+      }
+  });
+});
+
+
+
+
+

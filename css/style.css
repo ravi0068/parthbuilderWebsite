@@ -11,6 +11,10 @@ body {
     color: #333;
 }
 
+h1 {
+    font-family: "Barlow Semi Condensed", Sans-serif;
+}
+
 .topheader {
     background-color: #5e3d2b;
 }
@@ -35,7 +39,9 @@ body {
 }
 
 .nav-item {
+    font-family: "Barlow", sans-serif;
     padding-left: 7px;
+    font-weight: 700;
 }
 
 /* Default Styling for nav-item */
@@ -44,7 +50,7 @@ body {
     /* Default font color */
     text-decoration: none;
     /* Remove underline from links */
-    font-size: 85%;
+    font-size: 90%;
     /* Set font size */
     padding: 10px 20px;
     /* Add some padding */
@@ -72,14 +78,16 @@ body {
 .hero {
     position: relative;
     height: 130vh;
-    background: url('background.jpg') no-repeat center center/cover;
+    background-color: #cc924a;
+
 }
 
-#heroheader {
-    background-color: #cc924a;
-}
+#heroheader {}
 
 .hero-overlay {
+    border-radius: 0 0 0 153px;
+    background: url('../images/home-hdr-bg-img.jpg') no-repeat center center/cover;
+
     position: absolute;
     top: 0;
     left: 0;
@@ -95,6 +103,8 @@ body {
 
 .hero-content h1 {
     font-size: 5rem;
+    font-weight: 700;
+    color: #F4E6CC;
     margin-bottom: 1rem;
     animation: fadeIn 1.5s ease-in-out;
 }
@@ -160,6 +170,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #cc924a;
+
 }
 
 .property-features-container {
@@ -329,6 +341,174 @@ body {
     /* Golden hover color */
 }
 
+
+/* Initial state - all cards start off-screen and invisible */
+[id^="card-box"] {
+    opacity: 0;
+    transition: transform 0.8s ease, opacity 0.5s ease;
+}
+
+/* Even cards move from left */
+#card-box,
+#card-box3,
+#card-box5,
+#card-box7 {
+    transform: translateX(-50px);
+}
+
+/* Odd cards move from right */
+#card-box2nd,
+#card-box4,
+#card-box6 {
+    transform: translateX(50px);
+}
+
+/* Apply animation when scrolled */
+.projects-section.scrolled #card-box,
+.projects-section.scrolled #card-box2nd {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.projects-section.scrolled #card-box3,
+.projects-section.scrolled #card-box4 {
+    transform: translateX(0);
+    opacity: 1;
+    transition-delay: 0.3s;
+}
+
+.projects-section.scrolled #card-box5,
+.projects-section.scrolled #card-box6 {
+    transform: translateX(0);
+    opacity: 1;
+    transition-delay: 0.6s;
+}
+
+.projects-section.scrolled #card-box7 {
+    transform: translateX(0);
+    opacity: 1;
+    transition-delay: 0.9s;
+}
+
+
+
+
+
+
+
+/* Section Heading */
+
+.delivered-projects-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #eae4e0;
+}
+
+.delivered-projects-section h2 {
+    font-size: 2rem;
+    color: #5c322a;
+    font-weight: bold;
+}
+
+.delivered-projects-section p {
+    /* If you still want a subtitle */
+    font-size: 1rem;
+    color: #9c7e6b;
+    margin: 10px 0 20px;
+}
+
+.delivered-projects-section .divider {
+    width: 80px;
+    height: 4px;
+    background-color: #f2a555;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Cards Grid */
+
+.delivered-projects-grid {
+    display: flex;
+    gap: 20px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.delivered-project-card {
+    position: relative;
+    width: 100%;
+    /* Adjust as needed */
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.delivered-project-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.delivered-project-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.delivered-project-card .featured-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #f2a555;
+    color: #fff;
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.delivered-project-card .card-content {
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.delivered-project-card h3 {
+    font-size: 1.2rem;
+    color: #5c322a;
+    font-weight: bold;
+}
+
+.delivered-project-card p {
+    font-size: 0.9rem;
+    color: #777;
+    margin: 5px 0;
+}
+
+.delivered-project-card .explore-btn {
+    margin-top: 15px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #5c322a;
+    color: #fff;
+    font-size: 0.9rem;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.delivered-project-card .explore-btn:hover {
+    background-color: #f2a555;
+}
+
+
+
 .amenities {
     background-color: #4b2923;
     padding: 40px;
@@ -454,6 +634,12 @@ body {
     margin-bottom: 20px;
 }
 
+.subheading {
+    font-weight: 600;
+    font-size: 28px;
+    color: #442624bd;
+}
+
 .about-description {
     font-size: 16px;
     line-height: 1.6;
@@ -508,7 +694,7 @@ body {
 
 .about-image,
 .about-content {
-    transform: translateX(-50px);
+    transform: translateY(-50px);
     /* Start off-screen to the left for image */
     opacity: 0;
     transition: transform 0.8s ease, opacity 0.5s ease;
@@ -516,7 +702,7 @@ body {
 }
 
 .about-content {
-    transform: translateX(50px);
+    transform: translateY(50px);
     /* Start off-screen to the right for content */
 }
 
@@ -770,10 +956,55 @@ body {
 /* ///// commercial page css ///// */
 
 
+#commercial {
+    border-radius: 0 0 0 153px;
+    background: url('../images/commercial-hdr-bg-img.jpg') no-repeat center center/cover;
+
+}
+
+h1 span {
+    color: #ffbb4e;
+}
+
+.details-box {
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    gap: 20px;
+    /* Space between items */
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    /* Align icon and text */
+    background-color: #411C00F5;
+    /* Example brown color */
+    padding: 8px 40px;
+    border-radius: 18px;
+}
+
+.detail-item i {
+    /* Style the Remixicon icons */
+    font-size: 2rem;
+    /* Adjust icon size */
+    margin-right: 10px;
+}
+
+.detail-text {
+    font-size: 1rem;
+    /* Adjust text size */
+}
 
 .commercial-mall-section {
     padding-bottom: 70px;
+    padding-top: 70px;
+
+
 }
+
+
 
 
 /* Project Overview */
@@ -844,6 +1075,11 @@ body {
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease;
+}
+
+.mall-brochure-button a {
+    text-decoration: none;
+    color: #fff;
 }
 
 .mall-brochure-button:hover {
@@ -947,6 +1183,7 @@ body {
     font-size: 25px;
 }
 
+
 .social-icons .social-link i {
     width: 30px;
     height: 30px;
@@ -960,6 +1197,13 @@ body {
 .social-icons .social-link img:hover {
     transform: scale(1.1);
 }
+
+
+
+
+
+
+
 
 
 /* Map Section */
@@ -991,12 +1235,12 @@ body {
 
 
 .hero-content {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: #190d0db3;
     padding: 60px 220px;
     border-radius: 15px;
     text-align: center;
     color: #fff;
-    opacity: 0.5;
+    opacity: 0.9;
 }
 
 .hero-title {
@@ -1012,7 +1256,7 @@ body {
 .hero-subtitle {
     font-size: 1.5rem;
     margin: 10px 0;
-    color: #ddd;
+    color: #ce944b;
 }
 
 .hero-button {
