@@ -1,7 +1,7 @@
 /* for tablet 992px */
 @media screen and (max-width:1024px) {
   .hero-content h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
   .hero-content p {
@@ -128,11 +128,11 @@
   }
 
   .hero-content {
-    padding: 60px 60px;
+    padding: 60px 120px;
   }
 
   .hero-content h1 {
-    font-size: 2rem;
+    font-size: 3.5rem;
   }
 
   .hero-content p {
@@ -144,7 +144,7 @@
   }
 
   .project-card {
-    width: 100%;
+    width: 49%;
   }
 
   .property-features-container {
@@ -210,6 +210,48 @@
 
 
   }
+
+
+
+
+
+
+
+  .detail-item {
+    width: 48%;
+  }
+
+  .details-box {
+    flex-wrap: wrap;
+  }
+
+
+
+
+
+
+  .category {
+    width: 48%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 
@@ -218,16 +260,20 @@
 @media screen and (max-width:767px) {
 
   .hero {
-    height: 800px;
-}
+    height: 560px;
+  }
 
+  .hero-overlay {
+    border-radius: 0;
+  }
 
-.hero-content {
-  padding: 50px 21px;
-  width: 95%;
-}
+  .hero-content {
+    padding: 50px 21px;
+    width: 95%;
+  }
+
   .hero-content h1 {
-    font-size: 1.5rem;
+    font-size: 3rem;
   }
 
   .hero-content p {
@@ -237,7 +283,7 @@
 
   .hero-content .address {
     display: none;
-}
+  }
 
   .projects-grid {
     flex-direction: column;
@@ -248,9 +294,14 @@
     width: 100%;
   }
 
+  .delivered-project-card {
+    width: 100%;
+  }
+
   .about-section {
     padding: 0px;
-}
+  }
+
   .about-section {
     flex-direction: column;
   }
@@ -258,9 +309,11 @@
   .about-image img {
     max-width: 100%;
   }
+
   .feature-title {
     font-size: 9px;
-}
+  }
+
   .property-features-container {
     gap: 10px;
   }
@@ -268,7 +321,7 @@
   .feature-card {
     width: 48%;
     padding: 10px;
-}
+  }
 
   .contact-buttons {
     bottom: 10px;
@@ -291,7 +344,7 @@
   }
 
   .footer-links-section {
-    flex-direction: column;
+    flex-direction: row;
   }
 
 
@@ -305,12 +358,12 @@
 
   .justify-content-evenly {
     gap: 10px;
-}
+  }
 
   .contact-card {
     height: 400px;
     width: 81%;
-}
+  }
 
 
 
@@ -321,7 +374,87 @@
 
 
 
-.mall-image, .mall-content {
-  margin-top: 20px;
-}
+  .mall-image,
+  .mall-content {
+    margin-top: 20px;
+  }
+
+
+  .amenity-title {
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .amenity {
+    width: 124px;
+  }
+
+
+
+
+  #commercial {
+    border-radius: 0;
+  }
+
+  .details-box {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .detail-item {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+
+
+
+  #appartment {
+    border-radius: 0;
+  }
+
+  .categories {
+    flex-direction: column;
+  }
+
+
+
+
+
+  #enclave {
+    border-radius: 0;
+  }
+
+
+  #elegance {
+    border-radius: 0;
+  }
+
+
+  #palace {
+    border-radius: 0;
+  }
+
+  #prime {
+    border-radius: 0;
+  }
+
+  #sunrise {
+    border-radius: 0;
+  }
+
+  #sunshine {
+    border-radius: 0;
+  }
+
+
+
+
+
+
+
+
+
+
+
 }
