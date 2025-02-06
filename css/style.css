@@ -407,6 +407,7 @@ h1 {
 .delivered-projects-section h2 {
     font-size: 2rem;
     color: #5c322a;
+    /* Dark brown color for heading */
     font-weight: bold;
 }
 
@@ -421,6 +422,7 @@ h1 {
     width: 80px;
     height: 4px;
     background-color: #f2a555;
+    /* Golden brown divider */
     margin: 10px auto 0;
     border-radius: 2px;
 }
@@ -437,14 +439,14 @@ h1 {
 
 .delivered-project-card {
     position: relative;
-    width: 100%;
-    /* Adjust as needed */
+    width: 40%;
     background: #fff;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
 }
+
 
 .delivered-project-card:hover {
     transform: scale(1.03);
